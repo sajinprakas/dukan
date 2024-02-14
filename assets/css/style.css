@@ -25,6 +25,14 @@ body {
     --black:#222222;
 }
 
+span{
+    font-family: "Playball", cursive;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+}
+
 
 /*--------------------------------------------------------------
 # header
@@ -47,6 +55,7 @@ body {
         padding: 50px 0;
         overflow: hidden;
         padding-top: 80px;
+        z-index: 2;
     }
     nav ul {
         list-style-type: none;
@@ -65,14 +74,6 @@ body {
      font-size: 8vh;
      overflow: visible;
 } */
-    @media (max-width: 750px) {
-        nav ul li {
-            font-size: 15vw;
-        }
-        nav ul li:first-child {
-            font-size: 8vw;
-        }
-    }
     nav a {
         color: white;
         -o-transition:.3s;
@@ -145,10 +146,62 @@ body {
         color:var(--primary);
     }
 
+    .logo-img{
+        width: 300px;
+    }
+
+    .header-right{
+        display: flex;
+        align-items: center;
+        column-gap: 22px;
+    }
+
+    select {
+        word-wrap: normal;
+        color: var(--secondary);
+        background-color: var(--black);
+    }
+
+
+    .btn-primary {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #C83F46;
+        --bs-btn-border-color: #C83F46;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #C83F46;
+        --bs-btn-hover-border-color: #C83F46;
+        --bs-btn-focus-shadow-rgb: 49,132,253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #C83F46;
+        --bs-btn-active-border-color: #C83F46;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #C83F46;
+        --bs-btn-disabled-border-color: #C83F46;
+        font-family: Bebas Neue;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+        width: 140px;
+        height: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    @media(max-width:768px) {
+        #haederbtn-contact {
+            display: none;
+        }
+    }
  
 /*--------------------------------------------------------------
 # header End
 --------------------------------------------------------------*/
+
 
 
 /*--------------------------------------------------------------
@@ -204,7 +257,7 @@ body {
 .progress-wrap {
 	position: fixed;
     right: 15px;
-	bottom: 50px;
+	bottom: 50px;   
 	height: 46px;
 	width: 46px;
 	cursor: pointer;
@@ -230,7 +283,7 @@ body {
 	text-align: center;
 	line-height: 46px;
 	font-size: 24px;
-	color: #000000;
+	color: var(--secondary);
 	left: 0;
 	top: 0;
 	height: 46px;
@@ -272,10 +325,137 @@ body {
 	fill: none; 
 }
 .progress-wrap svg.progress-circle path {
-	stroke: #000000af;
+	stroke: var(--secondary);
 	stroke-width: 4;
 	box-sizing:border-box;
 	-webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
 
+
+/*--------------------------------------------------------------
+# Back to top button END
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Banner 
+--------------------------------------------------------------*/
+.banner-images img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.banner-images {
+    background-image: url('../images/banners/banner.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    /* height: 100%; */
+    position: relative;
+}
+
+.overlay {
+    background-color: #000000a3;
+    opacity: .5;
+    transition: background-color .3s,border-radius .3s,opacity .3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.banner-outer-div{
+    padding: 140px 0px;
+    max-width: 1140px;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.banner-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-inner span {
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.banner-inner h1 {
+    font-size: 70px;
+    line-height: 80px;
+    margin: 0;
+}
+
+.banner-inner p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+
+
+
+@media(max-width:600px) {
+    .btn-primary {
+        width: 120px;
+        height: 42px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        column-gap: 3px;
+    }
+
+    header {
+        padding: 18px;
+    }
+
+    select {
+        width: 42px;
+    }
+    nav ul li {
+        font-family: Bebas Neue;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: 0em;
+        text-transform: uppercase;
+        padding-bottom: 6px;
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+    }
+    .banner-inner h1 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+    .banner-inner p {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+/*--------------------------------------------------------------
+# Banner End
+--------------------------------------------------------------*/
