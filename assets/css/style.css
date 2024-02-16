@@ -15,7 +15,9 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.667em;
-  background-color: var(--black);
+  background-image: url('../images/bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   color: #fff;
 }
 
@@ -49,7 +51,7 @@ p {
         height: 100%;
         background: black;
         opacity: 0;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0px;
         padding: 50px 0;
@@ -458,4 +460,207 @@ p {
 
 /*--------------------------------------------------------------
 # Banner End
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Contact Us
+--------------------------------------------------------------*/
+
+.white-bg {
+    background-image: url('../images/white-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 30px;
+}
+
+.contact-outer{
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 5px solid #696969;
+    border-radius: 20px;
+    padding: 60px;
+}
+
+.grid-contact {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-div {
+    border: 3px solid #696969;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.div-sub-sec h6{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.div-sub-sec a{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 24px;
+    text-align: center;
+    color: #9A9A9A;
+}
+
+.div-sub-sec p{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 24px;
+    text-align: center;
+    color: #9A9A9A;
+}
+
+.head-contact{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+footer {
+    padding: 38px;
+    padding-bottom: 20px;
+}
+
+.footer {
+    /* padding: 38px; */
+    padding-top: 13px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 25px;
+    border-bottom: 1px solid #fff;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 47px;
+    height: 47px;
+}
+
+.footer-outer-div{
+    display: flex;
+}
+
+.foot-txt {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+}
+
+.foot-txt h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 60px;
+    color: #fff;
+    margin: 0;
+}
+
+.foot-txt p {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+.circle i {
+    font-size: 23px;
+}
+
+.footer-last{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-icons {
+    display: flex;
+    column-gap: 14px;
+    align-items: center;
+}
+
+.footer-icons i{
+    font-size: 26px;
+}
+
+@media(max-width:1024px) {
+    .grid-contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 0px;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .foot-txt h2 {
+        font-size: 35px;
+    }
+}
+
+@media(max-width:991px) {
+    .footer {
+        column-gap: 10px;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 20px;
+    }
+    .foot-txt h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media(max-width:768px) {
+    .contact-outer {
+        padding: 35px;
+    }
+}
+
+
+@media(max-width:600px) {
+    .footer {
+        column-gap: 10px;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 20px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Contact Us End
 --------------------------------------------------------------*/
